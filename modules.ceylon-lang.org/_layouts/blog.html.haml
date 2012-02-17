@@ -1,0 +1,44 @@
+---
+layout: default
+tab: blog
+unique_id: blogpage
+
+---
+#post-navigation
+  .post-navigation
+    #post-nav-previous
+      .previous
+        - if page.previous_post
+          .label
+            previous post
+          .nav-link
+            %a{:href => page.previous_post.url}= page.previous_post.title
+    #post-nav-next
+      .next
+        - if page.next_post
+          .label
+            next post
+          .nav-link
+            %a{:href => page.next_post.url}= page.next_post.title
+.post
+  %h1.title 
+    #{page.title}
+  .byline
+    .author
+      by
+      /there is only one author per page but the author splitter adds an array here
+      %a{:href=>page.author[0].primary_page.url} #{page.author[0]}
+    .date
+      = page.date.strftime('%d %b %Y')
+    .tags
+      - page.tags.each do |tag|
+        %a{:href=>tag.primary_page.url}
+          = tag
+  .body
+    ~ content
+    = page.disqus_comments
+  
+  <a href="/+" style="cursor:pointer;margin-left:auto;margin-right:auto;display:block;text-align:center">
+  <span style="display:inline-block;font-weight:bold;vertical-align:top;margin-right:5px;margin-top:8px;">Follow Ceylon on</span>
+  <img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:32px;height:32px;"/>
+  </a>

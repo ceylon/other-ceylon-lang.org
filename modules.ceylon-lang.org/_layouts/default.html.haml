@@ -15,22 +15,10 @@ tab: to-be-defined
       %ul#menu-core
         - idname = page.tab == "home" ? "selected" : "notselected"
         %li{ :id=>"#{idname}" }
-          %a{ :href=>'/' } Home
-        - idname = page.tab == "documentation" ? "selected" : "notselected"
+          %a{ :href=>'http://ceylon-lang.org' } Home
+        - idname = page.tab == "modules" ? "selected" : "notselected"
         %li{ :id=>"#{idname}" }
-          %a{ :href=>'/documentation' } Learn
-        - idname = page.tab == "download" ? "selected" : "notselected"
-        %li{ :id=>"#{idname}" }
-          %a{ :href=>'/download' } Download
-        - idname = page.tab == "community" ? "selected" : "notselected"
-        %li{ :id=>"#{idname}" }
-          %a{ :href=>'/community' } Community
-        - idname = page.tab == "code" ? "selected" : "notselected"
-        %li{ :id=>"#{idname}" }
-          %a{ :href=>'/code' } Code
-        - idname = page.tab == "blog" ? "selected" : "notselected"
-        %li{ :id=>"#{idname}" }
-          %a{ :href=>'/blog' } Blog
+          %a{ :href=>'/' } Modules
 .banner
   &nbsp;
 #primary-content

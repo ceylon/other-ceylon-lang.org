@@ -1,7 +1,8 @@
 ---
-layout: code
+layout: default
 title: Building the website
-tab: code
+tab: modules
+unique_id: neutralpage
 
 author: Emmanuel Bernard
 ---
